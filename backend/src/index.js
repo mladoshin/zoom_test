@@ -43,7 +43,7 @@ const coerceRequestBody = (body) => ({
 
 const joinGeoRegions = (geoRegions) => toStringArray(geoRegions)?.join(',')
 
-app.post('/', (req, res) => {
+app.post('/zoom', (req, res) => {
   const requestBody = coerceRequestBody(req.body)
   const validationErrors = validateRequest(requestBody, validator)
 
