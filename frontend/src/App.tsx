@@ -6,7 +6,7 @@ function App() {
   let sessionContainer: HTMLDivElement | null = null;
   // set your auth endpoint here 
   // a sample is available here: https://github.com/zoom/videosdk-auth-endpoint-sample
-  const authEndpoint = "http://localhost:4000"; // http://localhost:4000
+  const authEndpoint = "https://api.iseeyou.center/zoom"; // http://localhost:4000
   const config = {
     videoSDKJWT: "",
     sessionName: "test",
