@@ -6,14 +6,16 @@ function App() {
   let sessionContainer: HTMLDivElement | null = null;
   // set your auth endpoint here 
   // a sample is available here: https://github.com/zoom/videosdk-auth-endpoint-sample
-  const authEndpoint = "https://api.iseeyou.center/zoom"; // http://localhost:4000
+  //const authEndpoint = "http://localhost:8080/api/zoom/token"; // http://localhost:4000
+  const authEndpoint = "https://lk.iseeyou.center/api/zoom/token"
+
   const config = {
     videoSDKJWT: "",
     sessionName: "test",
     userName: "React",
     sessionPasscode: "123",
-    features: ["video", "audio", "settings", "users", "chat", "share"],
-    options: { init: {}, audio: {}, video: {}, share: {} },
+    features: ["video", "audio", "settings", "users", "chat", "share", "recording"],
+    options: { init: {}, audio: {}, video: {}, share: {}, recording: {} },
     virtualBackground: {
       allowVirtualBackground: true,
       allowVirtualBackgroundUpload: true,
@@ -28,7 +30,7 @@ function App() {
     fetch(authEndpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ sessionName: config.sessionName, role: role, }),
+      body: JSON.stringify({ role: role, sessionName: "Maxim Ladoshin" }),
     }).then((response) => {
       return response.json();
     }).then((data) => {

@@ -82,6 +82,8 @@ app.post('/zoom', (req, res) => {
     audio_compatible_mode: audioCompatibleMode
   }
 
+  console.log(oPayload, process.env.ZOOM_VIDEO_SDK_SECRET)
+
   const sHeader = JSON.stringify(oHeader)
   const sPayload = JSON.stringify(oPayload)
   const sdkJWT = KJUR.jws.JWS.sign('HS256', sHeader, sPayload, process.env.ZOOM_VIDEO_SDK_SECRET)
