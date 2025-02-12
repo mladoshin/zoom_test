@@ -30,7 +30,7 @@ function App() {
     fetch(authEndpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ role: role, sessionName: "Maxim Ladoshin" }),
+      body: JSON.stringify({ role: role, sessionName: "Maxim Ladoshin", cloud_recording_election: 1 }),
     }).then((response) => {
       return response.json();
     }).then((data) => {
