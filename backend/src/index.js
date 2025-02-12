@@ -82,7 +82,8 @@ app.post('/zoom', (req, res) => {
     audio_compatible_mode: audioCompatibleMode
   }
 
-  console.log(oPayload, process.env.ZOOM_VIDEO_SDK_SECRET)
+  //return res.json({ signature: oPayload })
+  console.log(oPayload)
 
   const sHeader = JSON.stringify(oHeader)
   const sPayload = JSON.stringify(oPayload)

@@ -11,9 +11,9 @@ function App() {
 
   const config = {
     videoSDKJWT: "",
-    sessionName: "test",
-    userName: "React",
-    sessionPasscode: "123",
+    sessionName: "Maxim Ladoshin",
+    userName: "Maxim Ladoshin",
+    sessionPasscode: "",
     features: ["video", "audio", "settings", "users", "chat", "share", "recording"],
     options: { init: {}, audio: {}, video: {}, share: {}, recording: {} },
     virtualBackground: {
